@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="atm-box">
+    <h2>ATM System</h2>
+
+    <form method="POST">
+        <input type="password" name="pin" placeholder="Enter PIN" required>
+        <input type="number" name="amount" placeholder="Enter Amount">
+
+        <button type="submit" name="action" value="create">Create PIN</button>
+        <button type="submit" name="action" value="show">Show PIN</button>
+        <button type="submit" name="action" value="balance">Check Balance</button>
+        <button type="submit" name="action" value="deposit">Deposit</button>
+    </form>
+
+    <p class="message">{{ message }}</p>
+</div>
+
+</body>
+</html>
